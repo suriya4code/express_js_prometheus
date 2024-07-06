@@ -1,4 +1,4 @@
-# Express.js basic CRUD API with Prometheus and Grafana Visualization\
+# Express.js basic CRUD API with Prometheus and Grafana Visualization
 
 <img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/visulization_1.png" alt="grafana visualization">
 
