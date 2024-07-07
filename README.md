@@ -1,8 +1,8 @@
 # Express.js basic CRUD API with Prometheus, Loki and Grafana Visualization
 
-<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_1.png" alt="grafana visualization">
-
 <img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_2.png" alt="grafana visualization">
+
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_1.png" alt="grafana visualization">
 
 This is a CRUD (Create, Read, Update, Delete) API built using Express.js framework. It also includes Prometheus for monitoring and Grafana for visualizations.
 
