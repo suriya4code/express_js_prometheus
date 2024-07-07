@@ -48,13 +48,14 @@ Grafana is used to visualize the metrics collected by Prometheus. It offers a wi
 <img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_3.png" alt="get api">
 
 
-##### 6. Grafana Visulization 1
+##### 6. Grafana Visulization with Loki logs and custom Histogram
 
-<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_5.png" alt="get api">
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_2.png" alt="grafana visualization">
 
 
-##### 7. Grafana Visulization 2
 
-<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_6.png" alt="get api">
 
+##### 7. Grafana with Loki Visulization 2
+
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_1.png" alt="grafana visualization">
 
