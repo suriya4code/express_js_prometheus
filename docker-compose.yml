@@ -18,3 +18,10 @@ services:
       - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
       - ./grafana-storage:/var/lib/grafana
+
+  grafana-loki:
+    image: grafana/loki
+    ports:
+      - 3100:3100
+    # volumes:
+    #   - ./\:/etc/loki/local-config.yaml

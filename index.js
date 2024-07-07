@@ -1,6 +1,18 @@
 const express = require('express');
 const client = require('prom-client');
 const responseTime = require('response-time');
+const LokiTransport = require('winston-loki');
+const { transports, createLogger } = require('winston');
+
+const options = {
+    transports: [
+        new LokiTransport({        
+            host: 'http://localhost:3100',})
+    ]};
+
+const log = createLogger(options);
+
+
 const app = express();
 app.use(express.json());
 
@@ -40,6 +52,7 @@ app.get('/metrics', async (req, res) => {
 
 // Health check
 app.get('/health', (req, res) => {
+    log.info('Health check');
     res.send('OK');
 });
 
@@ -50,17 +63,20 @@ app.get('/', (req, res) => {
 
 // Create
 app.post('/data', (req, res) => {
+    log.info('Data created');
     data.push(req.body);
     res.status(201).send(req.body);
 });
 
 // Read
 app.get('/data', (req, res) => {
+    log.info('Data read');
     res.send(data);
 });
 
 // Update
 app.put('/data/:id', (req, res) => {
+    log.info('Data updated');
     const id = req.params.id;
     const item = data.find(i => i.id === id);
     if (!item) {
@@ -72,6 +88,7 @@ app.put('/data/:id', (req, res) => {
 
 // Delete
 app.delete('/data/:id', (req, res) => {
+    log.info('Data deleted');
     const id = req.params.id;
     const index = data.findIndex(i => i.id === id);
     if (index === -1) {

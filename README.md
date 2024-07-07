@@ -1,6 +1,8 @@
-# Express.js basic CRUD API with Prometheus and Grafana Visualization
+# Express.js basic CRUD API with Prometheus, Loki and Grafana Visualization
 
-<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/visulization_1.png" alt="grafana visualization">
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_1.png" alt="grafana visualization">
+
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_2.png" alt="grafana visualization">
 
 This is a CRUD (Create, Read, Update, Delete) API built using Express.js framework. It also includes Prometheus for monitoring and Grafana for visualizations.
 
@@ -29,7 +31,7 @@ Grafana is used to visualize the metrics collected by Prometheus. It offers a wi
 
 ##### 1. Get Api
 
-<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_0.png" alt="get api">
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_1.png" alt="get api">
 
 ##### 2. Create Api
 <img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_2.png" alt="get api">
@@ -38,7 +40,7 @@ Grafana is used to visualize the metrics collected by Prometheus. It offers a wi
 <img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_1.png" alt="get api">
 
 ##### 4. Prometheus Metrics endpoint
-<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/express_api_prom_4.png" alt="get api">
+<img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_3.png" alt="get api">
 
 
 ##### 5. Prometheus dashboard
