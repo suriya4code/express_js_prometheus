@@ -1,5 +1,6 @@
 const express = require('express');
 const client = require('prom-client');
+const responseTime = require('response-time');
 const app = express();
 app.use(express.json());
 
@@ -10,9 +11,41 @@ const collectDefaultMetrics = client.collectDefaultMetrics;
 
 collectDefaultMetrics( {register : client.register });
 
+const no_of_request = new client.Counter({
+    name: 'no_of_request',
+    help: 'Number of requests made',
+    labelNames: ['method', 'route', 'code']
+})
+
+const requestTime = new client.Histogram({
+    name: 'http_request_duration_seconds',
+    help: 'Duration of HTTP requests in seconds',
+    labelNames: ['method', 'route', 'code'],
+    buckets: [0.1, 0.5, 1, 1.5, 2, 3, 5, 10]
+});
+
+app.use(responseTime((req, res, time) => {
+    no_of_request.inc({ method: req.method, route: req.route.path, code: res.statusCode });
+    requestTime.labels(req.method,
+         req.route.path,
+         res.statusCode).observe(time);
+
+}));
+
 app.get('/metrics', async (req, res) => {
     res.set('Content-Type', client.register.contentType);
     res.end(await client.register.metrics());
+});
+
+
+// Health check
+app.get('/health', (req, res) => {
+    res.send('OK');
+});
+
+// Root
+app.get('/', (req, res) => {
+    res.send('Hello World! from ExpressJs !');
 });
 
 // Create
