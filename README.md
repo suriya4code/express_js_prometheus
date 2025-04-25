@@ -1,4 +1,4 @@
-# Express.js basic CRUD API with Prometheus, Loki and Grafana Visualization
+# Express.js basic CRUD API with Prometheus, Loki and Grafana Visualization.
 
 <img src="https://raw.githubusercontent.com/suriya4code/express_js_prometheus/main/images/prom_loki_2.png" alt="grafana visualization">
 
